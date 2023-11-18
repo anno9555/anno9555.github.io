@@ -96,10 +96,11 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="./static/images/coco.png" alt="coco" height="100%">
+      <img src="./static/images/main.png" alt="main" height="100%">
       <h2 class="subtitle has-text-centered">
-        A qualitative comparison of the (a) COCO-Stuff and (b) Cityscapes trained using ViT-S/8 and ViT-B/8 as a backbone, respectively.
-        The comparison included previous state-of-the-art unsupervised semantic segmentation approaches and ours.
+      Overview illustration of our model, Cross Complementary Branch (**CoBra**). The dual branch framework consists of the Class-Aware Knowledge branch with CNN (top) and the Semantic-Aware Knowledge branch with ViT (bottom). The input image is passed down to both branches. **Class-Aware Knowledge (CAK) Branch**: The CNN outputs a feature map which generates (1) CNN CAMs via $f_{CAM}$, (2) Pseudo-Labels from CNN CAMs via $argmax$, and (3) Class-Aware Projection (CAP) via $f_{proj}$.
+    \textbf{Semantic-Aware Knowledge (SAK) Branch}: The ViT outputs $N^2$ Patch Embeddings which generate (1) ViT CAMs via $f_{CAM}$ and (2) Semantic-Aware Projection (SAP) via $f_{proj}$. We also use the Attention Maps of all $L$-layers to generate (3) Patch Affinity of size $N^2 \times N^2$.
+    \textbf{Complementary Branch Losses}: Once the necessary outputs are prepared, we employ various losses: (1) $\mathcal{L}_{cls}$: The typical classification loss based on the individual classification predictions of each CNN CAM and ViT CAM. (2) $\mathcal{L}_{cam}$: The L1 loss between the CNN CAM and ViT CAM. (3) $\mathcal{L}_{sap}$: The class-aware knowledge from the pseudo labels guides SAP to identify more accurate class-specific patches. (4) $\mathcal{L}_{cap}$: The semantic-aware knowledge from the patch affinity improves the semantic sensitivity of ViT CAM.
       </h2>
     </div>
   </div>
