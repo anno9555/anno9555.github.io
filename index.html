@@ -96,7 +96,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="./static/images/main.png" alt="main" height="100%">
+      <img src="./static/images/main1.png" alt="main" height="100%">
       <h2 class="subtitle has-text-centered">
       Overview illustration of our model, Cross Complementary Branch (**CoBra**). The dual branch framework consists of the Class-Aware Knowledge branch with CNN (top) and the Semantic-Aware Knowledge branch with ViT (bottom). The input image is passed down to both branches. **Class-Aware Knowledge (CAK) Branch**: The CNN outputs a feature map which generates (1) CNN CAMs via $f_{CAM}$, (2) Pseudo-Labels from CNN CAMs via $argmax$, and (3) Class-Aware Projection (CAP) via $f_{proj}$.
     \textbf{Semantic-Aware Knowledge (SAK) Branch}: The ViT outputs $N^2$ Patch Embeddings which generate (1) ViT CAMs via $f_{CAM}$ and (2) Semantic-Aware Projection (SAP) via $f_{proj}$. We also use the Attention Maps of all $L$-layers to generate (3) Patch Affinity of size $N^2 \times N^2$.
