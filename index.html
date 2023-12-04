@@ -140,6 +140,30 @@
   </div>
 </section>
 
+  <section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-3 has-text-centered">Main model</h3>
+          <div class="content has-text-centered">
+            <img src="./static/images/main.png" alt="Main figure">
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              Overview illustration of our model. <br>
+      <b>(I) Class Aware Knoweldge(CAK)</b>: The CNN outputs a feature map which generates (1) CNN CAMs via $f_{CAM}$, (2) Pseudo-Labels from CNN CAMs via $argmax$, and (3) Class-Aware Projection (CAP) via $f_{proj}$. <br>
+              
+      <b>(II) Semantic Aware Knowledge(SAK)</b>: The ViT outputs $N^2$ Patch Embeddings which generate (1) ViT CAMs via $f_{CAM}$ and (2) Semantic-Aware Projection (SAP) via $f_{proj}$. We also use the Attention Maps of all $L$-layers to generate (3) Patch Affinity of size $N^2 \times N^2$.
+            
+            </p>
+          </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+  
   
 <section class="section">
   <div class="container is-max-desktop">
@@ -147,9 +171,7 @@
     <div class="columns is-centered">
       <div class="column is-four-fifths">
         <h3 class="title is-3 has-text-centered">Method</h3>
-        
           <div class="content has-text-centered">
-            <img src="./static/images/main.png" alt="Main figure">
             <img src="./static/images/main2.png" alt="Main figure">
           </div>
           <div class="content has-text-justified">
