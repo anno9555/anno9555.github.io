@@ -149,16 +149,16 @@
       <div class="column is-four-fifths">
         <h3 class="title is-3 has-text-centered">Method</h3>
         
-        <div class="content has-text-centered">
-          <img src="./static/images/main2.png" alt="Main figure">
-        </div>
-        <div class="content has-text-justified">
-          <p>
-            Illustration of refining CAP and SAP from SAK and CAK branch respectively. <br>
-    <b>(I) Class Aware Knoweldge(CAK)</b>: The CAP values are embedded in the Class Feature Space. (1) The patch affinity from SAK branch assigns the positive (green), negative (red), and neutral (teal) patches based on the target (white) patch. (2) The CNN CAM shows that the false negative patches have been weakly localized as horse. (3) The CAP loss pull those weakly localized patches (i.e., false class negatives) since they are assigned as semantically positive patches based on SAK branch. (3) The CAP is refined to improve the CNN CAM showing fewer false class negatives. <br>
-    <b>(II) Semantic Aware Knowledge(SAK)</b>: The SAP values are embedded in the Semantic Feature Space. (1) The CNN CAM from CAK branch assigns the positive (green), negative (red), and neutral (teal) patches based on the target (white) patch. (2) The ViT CAM shows that the negative patches have been incorrectly localized as horse. The SAP loss pushes away those incorrectly localized patches (i.e., false class positives) since they are assigned as negative patches based on CAK branch. (3) The SAP is refined to improve the ViT CAM showing fewer false class positives.
-          </p>
-        </div>
+          <div class="content has-text-centered">
+            <img src="./static/images/main2.png" alt="Main figure">
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              Illustration of refining CAP and SAP from SAK and CAK branch respectively. <br>
+      <b>(I) Class Aware Knoweldge(CAK)</b>: The CAP values are embedded in the Class Feature Space. (1) The patch affinity from SAK branch assigns the positive (green), negative (red), and neutral (teal) patches based on the target (white) patch. (2) The CNN CAM shows that the false negative patches have been weakly localized as horse. (3) The CAP loss pull those weakly localized patches (i.e., false class negatives) since they are assigned as semantically positive patches based on SAK branch. (3) The CAP is refined to improve the CNN CAM showing fewer false class negatives. <br>
+      <b>(II) Semantic Aware Knowledge(SAK)</b>: The SAP values are embedded in the Semantic Feature Space. (1) The CNN CAM from CAK branch assigns the positive (green), negative (red), and neutral (teal) patches based on the target (white) patch. (2) The ViT CAM shows that the negative patches have been incorrectly localized as horse. The SAP loss pushes away those incorrectly localized patches (i.e., false class positives) since they are assigned as negative patches based on CAK branch. (3) The SAP is refined to improve the ViT CAM showing fewer false class positives.
+            </p>
+          </div>
       </div>
     </div>
     
@@ -172,9 +172,17 @@
     <div class="columns is-centered">
       <div class="column is-four-fifths">
         <h3 class="title is-3 has-text-centered">Quantitative Experiments</h3>
-        
+        <h4 class="title is-3 has-text-centered">Pascal VOC2012 seed & mask results</h3>
         <div class="content has-text-centered">
-          <img src="./static/images/main3.png" alt="Main figure">
+          <img src="./static/images/table1.png" alt="Main figure">
+        </div>
+        <h4 class="title is-3 has-text-centered">Pascal VOC2012 segmentation results</h3>
+        <div class="content has-text-centered">
+          <img src="./static/images/table2.png" alt="Main figure">
+        </div>
+        <h4 class="title is-3 has-text-centered">MS COCO 2014 segmentation results</h3>
+        <div class="content has-text-centered">
+          <img src="./static/images/Table3.png" alt="Main figure">
         </div>
         <div class="content has-text-justified">
           <p>
